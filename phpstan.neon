@@ -1,0 +1,16 @@
+includes:
+	- vendor/contributte/phpstan/phpstan.neon
+
+parameters:
+	level: {{PHPSTAN_LEVEL}}
+	phpVersion: {{PHP_MIN_VERSION}}
+
+	scanDirectories:
+		- src
+
+	fileExtensions:
+		- php
+
+	paths:
+		- src
+		- .docs

@@ -1,0 +1,37 @@
+name: "Nette Tester"
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+  push:
+    branches: [ "*" ]
+
+  schedule:
+    - cron: "0 10 * * 1"
+
+jobs:
+  test84:
+    name: "Nette Tester"
+    uses: contributte/.github/.github/workflows/nette-tester.yml@master
+    with:
+      php: "{{PHP_MAX_VERSION}}"
+
+  test83:
+    name: "Nette Tester"
+    uses: contributte/.github/.github/workflows/nette-tester.yml@master
+    with:
+      php: "{{PHP_VERSION}}"
+
+  test82:
+    name: "Nette Tester"
+    uses: contributte/.github/.github/workflows/nette-tester.yml@master
+    with:
+      php: "{{PHP_VERSION}}"
+
+  testlower:
+    name: "Nette Tester"
+    uses: contributte/.github/.github/workflows/nette-tester.yml@master
+    with:
+      php: "{{PHP_MIN_VERSION}}"
+      composer: "composer update --no-interaction --no-progress --prefer-dist --prefer-stable --prefer-lowest"
