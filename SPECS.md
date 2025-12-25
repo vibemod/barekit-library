@@ -194,6 +194,21 @@ make tests     # Run tests
 make coverage  # Generate coverage report
 ```
 
+### Required Dependencies
+
+All Contributte libraries MUST use these dev dependencies:
+
+| Package | Purpose | Required |
+|---------|---------|----------|
+| `contributte/tester` | Test utilities wrapper | **Yes** |
+| `contributte/qa` | Code style ruleset | **Yes** |
+| `contributte/phpstan` | PHPStan configuration | **Yes** |
+
+**Important:** Do NOT replace `contributte/tester` with raw `nette/tester`. The wrapper provides:
+- `Contributte\Tester\Environment` for test setup
+- `Contributte\Tester\Toolkit` for test organization
+- Consistent patterns across all Contributte libraries
+
 ---
 
 ## Example Usage
