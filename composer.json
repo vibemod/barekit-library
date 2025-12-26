@@ -31,9 +31,6 @@
       "Tests\\": "tests"
     }
   },
-  "conflict": {
-    "nette/application": "<3.2.5"
-  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
